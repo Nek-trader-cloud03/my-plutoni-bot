@@ -1,0 +1,23 @@
+import os
+import time
+from tinkoff.invest import Client, SecurityTradingStatus
+from tinkoff.invest.services import MarketDataService
+
+# ТОКЕНИ ХУДРО ДАР ИН ҶО НАВИСЕД
+TOKEN = t.o6PwVXpxAXJJ6RHrJ1nuWWHJ_8K3DUvZwjMLi_5QLXubtNuxpEBUlx0IPnE68VNYFEV4hQvPcW8aslaqiHNnxQ
+
+def run_bot():
+    print("Бот ба кор даромад ва Мосбиржаро сканират дорад...")
+    
+    with Client(TOKEN) as client:
+        # Номи аксияҳо (тикерҳо) барои сканер: Сбербанк ва Газпром
+        tickers = ["SBER", "GAZP"]
+        
+        try:
+            print("Сканери нархҳо бомуваффақият фаъол шуд.")
+            # Бот дар ин ҷо котировкаҳоро мехонад
+        except Exception as e:
+            print(f"Хатогӣ ҳангоми кор бо API: {e}")
+
+if __name__ == "__main__":
+    run_bot()
