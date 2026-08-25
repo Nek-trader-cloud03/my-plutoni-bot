@@ -1,3 +1,5 @@
 plutoni
 pandas
 requests
+tinkoff-investments  
+apimoex
